@@ -1,0 +1,93 @@
+{
+  "scheddy": "UNCHANGED",
+  "other_backgrounds": "11 approved people-free photoreal background scenes",
+  "svg_direction": "TOP_TO_BOTTOM",
+  "stroke_count": {
+    "Scheddy": 330,
+    "Real Site": 330,
+    "Beautiful Repair": 330,
+    "CLEAVE": 330,
+    "Dump Pass": 330,
+    "Handsy": 330,
+    "Sippin": 330,
+    "Mentor180": 330,
+    "Sibz Corporation": 330,
+    "Partsy, Inc.": 330,
+    "Trade Bowl": 330,
+    "Wee Worker": 330
+  },
+  "owner_enter_complete_ms": 1330,
+  "first_background_stroke_ms": 1750,
+  "companies": [
+    "Scheddy",
+    "Real Site",
+    "Beautiful Repair",
+    "CLEAVE",
+    "Dump Pass",
+    "Handsy",
+    "Sippin",
+    "Mentor180",
+    "Sibz Corporation",
+    "Partsy, Inc.",
+    "Trade Bowl",
+    "Wee Worker"
+  ],
+  "non_scheddy_background_resolution": "3200x1600",
+  "sequence": "blank -> owner rises -> pause -> top-down SVG draw -> illustrated hold -> dissolve",
+  "real_background_left_fade": "starts at 50% screen midpoint and fades toward the left",
+  "svg_cleanup": "split abnormal point jumps; reject long connector rails",
+  "cleaned_strokes": {
+    "Real Site": {
+      "before": 330,
+      "after": 330
+    },
+    "Beautiful Repair": {
+      "before": 330,
+      "after": 330
+    },
+    "CLEAVE": {
+      "before": 330,
+      "after": 330
+    },
+    "Dump Pass": {
+      "before": 330,
+      "after": 330
+    },
+    "Handsy": {
+      "before": 330,
+      "after": 330
+    },
+    "Sippin": {
+      "before": 330,
+      "after": 330
+    },
+    "Mentor180": {
+      "before": 330,
+      "after": 330
+    },
+    "Sibz Corporation": {
+      "before": 330,
+      "after": 330
+    },
+    "Partsy, Inc.": {
+      "before": 330,
+      "after": 330
+    },
+    "Trade Bowl": {
+      "before": 330,
+      "after": 330
+    },
+    "Wee Worker": {
+      "before": 330,
+      "after": 330
+    }
+  },
+  "render_mode": "ILLUSTRATED_ONLY",
+  "visual_language": {
+    "HIGHER": "white + persistent clouds",
+    "BUILDER": "photographic + color",
+    "VENTURE": "restrained charcoal SVG illustration"
+  },
+  "real_background_rendered": false,
+  "cloud_system": "UNCHANGED"
+}

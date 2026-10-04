@@ -1,0 +1,341 @@
+/* =========================================================
+   HIGHER INNERTAINMENT
+   Six 100vw slides inside the existing Higher site shell.
+   ========================================================= */
+
+.innertainment{
+  position:relative;
+  width:100vw;
+  height:100dvh;
+  overflow:hidden;
+  background:#fff;
+  color:#111;
+  isolation:isolate;
+  touch-action:pan-y;
+}
+
+.innertainmentTrack{
+  position:absolute;
+  inset:0 auto 0 0;
+  display:flex;
+  width:600vw;
+  height:100dvh;
+  will-change:transform;
+  transition:transform 1.05s cubic-bezier(.22,1,.36,1);
+}
+
+.innertainmentSlide{
+  position:relative;
+  flex:0 0 100vw;
+  width:100vw;
+  height:100dvh;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 72% 35%,rgba(224,229,230,.55),transparent 31%),
+    linear-gradient(180deg,#fff 0%,#fff 72%,#f3f5f5 100%);
+}
+
+.innertainmentCopy{
+  position:absolute;
+  z-index:7;
+  left:7vw;
+  top:50%;
+  width:min(39vw,610px);
+  transform:translateY(-53%);
+  opacity:.35;
+  transition:opacity .7s ease .18s,transform .9s cubic-bezier(.22,1,.36,1) .1s;
+}
+
+.innertainmentSlide.isActive .innertainmentCopy{
+  opacity:1;
+  transform:translateY(-55%);
+}
+
+.innertainmentEyebrow{
+  margin-bottom:22px;
+  font-size:10px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
+
+.innertainmentEyebrow::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:1px;
+  margin-top:14px;
+  background:var(--teal,#0b9ca8);
+}
+
+.innertainmentCopy h1{
+  margin:0;
+  font-size:clamp(64px,6.4vw,118px);
+  font-weight:700;
+  line-height:.82;
+  letter-spacing:-.07em;
+}
+
+.innertainmentCopy h1 span{
+  color:#8a8f91;
+}
+
+.innertainmentCopy h1 span::after{
+  content:"";
+  display:inline-block;
+  width:.14em;
+  height:.14em;
+  margin-left:.05em;
+  border-radius:50%;
+  background:var(--teal,#0b9ca8);
+}
+
+.innertainmentCopy p{
+  max-width:480px;
+  margin:26px 0 0;
+  font-size:15px;
+  line-height:1.5;
+  color:#303638;
+}
+
+.innertainmentCopy ul{
+  list-style:none;
+  padding:0;
+  margin:22px 0 0;
+  font-size:12px;
+  line-height:1.65;
+  color:#4e5557;
+}
+
+.innertainmentCopy li::before{
+  content:"→";
+  margin-right:10px;
+  color:#111;
+}
+
+.innertainmentExplore{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:25px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#111;
+  cursor:pointer;
+}
+
+.innertainmentExplore b{
+  display:grid;
+  place-items:center;
+  width:45px;
+  height:45px;
+  border:1px solid #111;
+  border-radius:50%;
+  font-size:19px;
+  font-weight:400;
+  transition:transform .25s ease,border-color .25s ease;
+}
+
+.innertainmentExplore span{
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+}
+
+.innertainmentExplore:hover b{
+  transform:translateX(4px);
+  border-color:var(--teal,#0b9ca8);
+}
+
+.innertainmentVisual{
+  position:absolute;
+  z-index:3;
+  top:75px;
+  right:0;
+  bottom:118px;
+  width:62vw;
+  overflow:hidden;
+  opacity:.38;
+  transform:translateX(35px) scale(.985);
+  transition:opacity .8s ease .12s,transform 1s cubic-bezier(.22,1,.36,1);
+}
+
+.innertainmentSlide.isActive .innertainmentVisual{
+  opacity:1;
+  transform:translateX(0) scale(1);
+}
+
+.innertainmentVisual img{
+  object-fit:contain !important;
+  object-position:right center !important;
+  filter:grayscale(1);
+  mix-blend-mode:multiply;
+}
+
+.innertainmentNav{
+  position:absolute;
+  z-index:20;
+  left:7vw;
+  right:7vw;
+  bottom:24px;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:18px;
+  padding-top:14px;
+  border-top:1px solid rgba(17,17,17,.12);
+}
+
+.innertainmentNav button{
+  position:relative;
+  min-width:0;
+  padding:9px 0 13px;
+  border:0;
+  background:transparent;
+  text-align:left;
+  cursor:pointer;
+  color:#111;
+  opacity:.43;
+  transition:opacity .3s ease;
+}
+
+.innertainmentNav button:hover,
+.innertainmentNav button.active{
+  opacity:1;
+}
+
+.innertainmentNav button::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:3px;
+  background:var(--teal,#0b9ca8);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .45s cubic-bezier(.22,1,.36,1);
+}
+
+.innertainmentNav button.active::after{
+  transform:scaleX(1);
+}
+
+.innertainmentNav small,
+.innertainmentNav strong,
+.innertainmentNav span{
+  display:block;
+}
+
+.innertainmentNav small{
+  margin-bottom:8px;
+  font-size:8px;
+  font-weight:700;
+  color:var(--teal,#0b9ca8);
+}
+
+.innertainmentNav strong{
+  font-size:10px;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+
+.innertainmentNav span{
+  overflow:hidden;
+  margin-top:3px;
+  color:#717779;
+  font-size:9px;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.innertainmentCounter{
+  position:absolute;
+  z-index:21;
+  right:2.7vw;
+  top:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:9px;
+  transform:translateY(-50%);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.12em;
+  color:rgba(17,17,17,.42);
+}
+
+.innertainmentCounter i{
+  width:1px;
+  height:50px;
+  background:linear-gradient(to bottom,rgba(17,17,17,.12),var(--teal,#0b9ca8),rgba(17,17,17,.12));
+}
+
+@media (max-width:900px){
+  .innertainmentCopy{
+    left:7vw;
+    width:76vw;
+  }
+
+  .innertainmentCopy h1{
+    font-size:clamp(52px,11vw,84px);
+  }
+
+  .innertainmentVisual{
+    top:80px;
+    right:-18vw;
+    bottom:120px;
+    width:88vw;
+    opacity:.2;
+  }
+
+  .innertainmentSlide.isActive .innertainmentVisual{
+    opacity:.28;
+  }
+
+  .innertainmentNav{
+    overflow-x:auto;
+    display:flex;
+    gap:24px;
+    scrollbar-width:none;
+  }
+
+  .innertainmentNav::-webkit-scrollbar{display:none}
+
+  .innertainmentNav button{
+    flex:0 0 118px;
+  }
+}
+
+@media (max-width:620px){
+  .innertainmentCopy{
+    top:47%;
+    width:84vw;
+  }
+
+  .innertainmentCopy p{
+    max-width:78vw;
+    font-size:14px;
+  }
+
+  .innertainmentVisual{
+    right:-30vw;
+    width:110vw;
+  }
+
+  .innertainmentCounter{
+    display:none;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .innertainmentTrack,
+  .innertainmentCopy,
+  .innertainmentVisual,
+  .innertainmentNav button::after,
+  .innertainmentExplore b{
+    transition-duration:.01ms !important;
+  }
+}

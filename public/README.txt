@@ -1,0 +1,1 @@
+Assets are local crops derived from the approved HIGHER.VENTURES design mockup generated in this conversation. Replace any crop with final production artwork as desired. design-reference.png is included as the visual reference.

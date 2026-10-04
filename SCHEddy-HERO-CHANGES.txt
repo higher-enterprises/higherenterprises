@@ -1,0 +1,29 @@
+SCHEddy homepage world transition
+
+MODIFIED:
+- src/components/Hero.tsx
+- src/app/globals.css (Hero-only rules appended)
+
+ADDED:
+- public/assets/home/backgrounds/scheddy/scheddy-studio-illustration.png
+- public/assets/home/backgrounds/scheddy/scheddy-studio-photo.png
+
+NOT MODIFIED:
+- Hero state machine/timers
+- companies.ts
+- CloudHorizon
+- Header/navigation
+- Scheddy founder cutout
+- logo/copy/CTA
+- wanna go?
+- any other page/component
+
+SEQUENCE:
+existing founder+copy rise
+→ illustration fades in
+→ illustration crossfades to matched full-color studio
+→ photo holds
+→ background fades away
+→ existing Hero fading phase fades founder+copy
+→ existing gap
+→ next venture

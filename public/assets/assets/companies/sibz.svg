@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 472 320">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eafafa"/><stop offset=".5" stop-color="#79d7dc"/><stop offset="1" stop-color="#087d89"/></linearGradient><radialGradient id="r"><stop stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="472" height="320" fill="url(#g)"/><circle cx="370" cy="70" r="160" fill="url(#r)" opacity=".55"/>
+<g fill="none" stroke="#083b43" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".78"><path d="M120 95h72c22 0 40 18 40 40v95h-72c-22 0-40-18-40-40V95Zm232 0h-72c-22 0-40 18-40 40v95h72c22 0 40-18 40-40V95Z"/></g>
+<text x="30" y="282" font-family="Arial,sans-serif" font-size="13" letter-spacing="3" fill="#083b43">EDUCATION</text>
+</svg>
