@@ -23,6 +23,10 @@ type DrawerCompany = Company & {
     src: string;
     alt?: string;
   }[];
+  ventureBrief?: {
+    href: string;
+    label?: string;
+  };
 };
 
 const studioShort=(studio:string)=>studio.replace(/\.VENTURES$/i,"").replace(/ VENTURES$/i,"").replace(/^HIGHER\s+/i,"");
