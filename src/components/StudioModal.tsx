@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import Image from "next/image";
 import { studios } from "@/data/studios";
@@ -14,6 +15,12 @@ export default function StudioModal({
   studio: Studio | null;
   onClose: () => void;
 }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   useEffect(() => {
     if (!studio) return;
 
@@ -25,9 +32,9 @@ export default function StudioModal({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [studio, onClose]);
 
-  if (!studio) return null;
+  if (!mounted || !studio) return null;
 
-  return (
+  return createPortal(
     <div
       className="studioModalLayer"
       role="presentation"
@@ -90,6 +97,7 @@ export default function StudioModal({
           </button>
         </div>
       </section>
-    </div>
+    </div>,
+    document.body
   );
 }

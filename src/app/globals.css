@@ -10897,3 +10897,726 @@ from{transform:translate3d(calc(-1 * var(--loop-width,1600px)),0,0)}to{transform
   }
 }
 
+
+/* =========================================================
+   MOBILE FOUNDATION — AUTHORITATIVE
+   Portrait composition for HIGHER home experience.
+   Desktop rules above remain untouched.
+   ========================================================= */
+@media (max-width: 720px) {
+  html,
+  body,
+  .siteShell,
+  .siteViewport {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Header: compact, intentional, and always clear of hero copy. */
+  .header {
+    height: 84px !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: max(16px, env(safe-area-inset-top)) 20px 10px !important;
+  }
+
+  .header nav {
+    display: none !important;
+  }
+
+  .brandLogo {
+    width: 118px !important;
+    height: 48px !important;
+    overflow: visible !important;
+  }
+
+  .brandLogo img {
+    width: 132px !important;
+    max-width: none !important;
+    height: auto !important;
+  }
+
+  .headerCta {
+    display: inline-flex !important;
+    min-height: 38px !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 9px 15px !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: var(--teal) !important;
+    color: #fff !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: .035em !important;
+    white-space: nowrap !important;
+    box-shadow: 0 8px 22px rgba(10,164,173,.18) !important;
+  }
+
+  /* Home is still a single cinematic viewport; only the composition changes. */
+  .ventureStage,
+  .ventureSlides,
+  .ventureSlide {
+    width: 100% !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+  }
+
+  .ventureSlide {
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .ventureForeground {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  /* Venture identity becomes a clean top story block below the header. */
+  .ventureSlideCopy,
+  .ventureSlideCopy.ventureCopySlide {
+    position: absolute !important;
+    z-index: 30 !important;
+    top: 106px !important;
+    left: 24px !important;
+    right: 24px !important;
+    width: auto !important;
+    max-width: 430px !important;
+    padding: 0 !important;
+  }
+
+  .ventureHeroLogo {
+    width: auto !important;
+    max-width: 145px !important;
+    max-height: 48px !important;
+    margin: 0 0 12px !important;
+  }
+
+  .ventureSlideCopy h1,
+  .ventureSlideCopy.ventureCopySlide h1 {
+    margin: 0 0 9px !important;
+    font-size: clamp(34px, 9.6vw, 43px) !important;
+    line-height: .96 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  .ventureSlideCopy p,
+  .ventureSlideCopy.ventureCopySlide p {
+    width: 100% !important;
+    max-width: 355px !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.42 !important;
+    letter-spacing: -.008em !important;
+  }
+
+  .ventureExplore {
+    min-height: 40px !important;
+    margin-top: 16px !important;
+    padding: 9px 16px !important;
+    gap: 25px !important;
+    border-radius: 999px !important;
+    font-size: 10px !important;
+    box-shadow: 0 7px 20px rgba(10,164,173,.12) !important;
+  }
+
+  /* "wanna go?" stays atmospheric, but now anchors the visual transition. */
+  .wannaGo {
+    z-index: 1 !important;
+    top: 52% !important;
+    left: 50% !important;
+    font-size: 16.5vw !important;
+    line-height: .82 !important;
+    color: rgba(25,31,32,.075) !important;
+  }
+
+  /* Environmental world occupies the lower portrait field. */
+  .ventureBackgroundDropWrap {
+    z-index: 2 !important;
+    top: 43dvh !important;
+    right: -28vw !important;
+    bottom: 7dvh !important;
+    left: 8vw !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .ventureBackgroundDrop {
+    inset: 0 !important;
+  }
+
+  .ventureBackgroundDropImage {
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  /* Founder remains the dominant foreground element emerging from clouds. */
+  .ventureVisualWrap,
+  .ventureVisualWrap.ventureOwnerRise {
+    position: absolute !important;
+    z-index: 12 !important;
+    left: -9vw !important;
+    right: -9vw !important;
+    bottom: -2dvh !important;
+    width: 118vw !important;
+    height: 55dvh !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+
+  .ventureHeroVisual,
+  .ventureVisualWrap.ventureOwnerRise .ventureHeroVisual {
+    width: auto !important;
+    height: 57dvh !important;
+    max-width: 118vw !important;
+    max-height: 57dvh !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  .ventureSlide.entering .ventureOwnerRise,
+  .ventureSlide.holding .ventureOwnerRise {
+    transform: translate3d(0, 3dvh, 0) !important;
+  }
+
+  /* Keep the traveling cloud veil proportional to portrait artwork. */
+  .ventureDropCloudBack {
+    bottom: -3% !important;
+    height: 42% !important;
+  }
+
+  .ventureDropCloudFront {
+    bottom: -12% !important;
+    height: 49% !important;
+  }
+}
+
+/* Short phones: protect the copy/art boundary without changing the design. */
+@media (max-width: 720px) and (max-height: 740px) {
+  .ventureSlideCopy,
+  .ventureSlideCopy.ventureCopySlide {
+    top: 92px !important;
+  }
+
+  .ventureHeroLogo {
+    max-height: 40px !important;
+    margin-bottom: 9px !important;
+  }
+
+  .ventureSlideCopy h1,
+  .ventureSlideCopy.ventureCopySlide h1 {
+    font-size: 34px !important;
+  }
+
+  .ventureSlideCopy p,
+  .ventureSlideCopy.ventureCopySlide p {
+    font-size: 12.5px !important;
+    line-height: 1.34 !important;
+  }
+
+  .ventureExplore {
+    margin-top: 12px !important;
+  }
+
+  .ventureBackgroundDropWrap {
+    top: 45dvh !important;
+  }
+
+  .ventureVisualWrap,
+  .ventureVisualWrap.ventureOwnerRise {
+    height: 52dvh !important;
+  }
+
+  .ventureHeroVisual,
+  .ventureVisualWrap.ventureOwnerRise .ventureHeroVisual {
+    height: 54dvh !important;
+    max-height: 54dvh !important;
+  }
+}
+
+/* =========================================================
+   MOBILE HEADER MENU — hamburger sits LEFT of persistent CTA
+   ========================================================= */
+.headerActions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenuButton,
+.mobileNavOverlay {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .header {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+  }
+
+  .headerActions {
+    position: relative;
+    z-index: 62;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.82);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(20,32,35,.07);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .mobileMenuButton span {
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background: #111;
+    border-radius: 2px;
+    transform-origin: center;
+    transition: transform .28s ease, opacity .2s ease;
+  }
+
+  .mobileMenuButton.open span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+  }
+
+  .mobileMenuButton.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobileMenuButton.open span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+  }
+
+  .mobileNavOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 28px 130px;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity .3s ease, transform .4s cubic-bezier(.22,1,.36,1), visibility .3s ease;
+  }
+
+  .mobileNavOverlay.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobileNavLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .mobileNavLinks a {
+    font-family: "Manrope","Avenir Next","Segoe UI",Arial,sans-serif;
+    font-size: clamp(32px, 10vw, 46px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -.045em;
+    color: #15191a;
+  }
+}
+
+/* =========================================================
+   MOBILE VENTURES — authoritative phone layout
+   Keep every filter inside the viewport and make the company
+   dossier genuinely vertically scrollable on iOS Safari.
+   ========================================================= */
+@media (max-width: 720px) {
+  .companiesPage {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow: hidden !important;
+  }
+
+  .companiesContent {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .companiesExperience {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .companiesFilters {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+    overflow: visible !important;
+  }
+
+  .filterDropdown,
+  .selectControl,
+  .companySearch {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .selectControl,
+  .companySearch {
+    width: 100% !important;
+  }
+
+  .selectControl {
+    padding-left: 12px !important;
+    padding-right: 10px !important;
+  }
+
+  .selectControl > span {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .companySearch {
+    grid-column: 1 / -1 !important;
+  }
+
+  .filterMenu {
+    width: min(280px, calc(100vw - 40px)) !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - 40px) !important;
+  }
+
+  /* Drawer owns the scroll on phones. */
+  .companyProfileDrawer {
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 100vw !important;
+    height: 92dvh !important;
+    max-height: 92dvh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0 0 16px 16px !important;
+  }
+
+  .companyProfileDrawer .companyDrawerInner {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 68px 20px 80px !important;
+  }
+
+  .companyProfileDrawer .drawerClose {
+    position: fixed !important;
+    top: 16px !important;
+    right: 18px !important;
+    z-index: 220 !important;
+  }
+
+  .companyProfileGrid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    gap: 22px !important;
+    overflow: visible !important;
+  }
+
+  .companyGallery,
+  .companyProfileMain,
+  .companyProfileRight {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .companyDrawerPhoto {
+    width: 100% !important;
+    height: clamp(180px, 27dvh, 230px) !important;
+    min-height: 180px !important;
+    max-height: 230px !important;
+    border-radius: 16px !important;
+  }
+
+  .companyGalleryThumbs {
+    margin-top: 8px !important;
+  }
+
+  .companyProfileMain {
+    padding: 0 !important;
+  }
+
+  .companyIdentity {
+    display: grid !important;
+    grid-template-columns: 88px minmax(0, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .companyLogoBox {
+    width: 88px !important;
+    height: 88px !important;
+    border-radius: 16px !important;
+  }
+
+  .companyIdentityCopy {
+    min-width: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .companyIdentityCopy h2 {
+    font-size: clamp(34px, 10vw, 46px) !important;
+    line-height: .92 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .companyAlignedDetails {
+    margin-left: 0 !important;
+    margin-top: 22px !important;
+    padding-right: 0 !important;
+  }
+
+  .companyProfileRight {
+    display: flex !important;
+    padding-bottom: 24px !important;
+  }
+
+  .companyFactGrid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================
+   STUDIOS — MOBILE MODAL STACKING / TOUCH FIX
+   Keep studio overlay above header, clouds, cards, drawers and effects.
+   ========================================================= */
+@media (max-width: 720px) {
+  .studioModalLayer {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 2147483000 !important;
+    isolation: isolate !important;
+    pointer-events: auto !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 96px 18px 40px !important;
+  }
+
+  .studioModalCard {
+    position: relative !important;
+    z-index: 2147483001 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .studioModalCard > .studioModalClose {
+    z-index: 2147483002 !important;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+  }
+}
+
+
+/* =========================================================
+   PERSPECTIVE — TRUE MOBILE SWIPE RAIL
+   Actual component structure:
+   .perspectiveFoundation > .perspectiveAllGrid > .perspectiveAllCard
+   Must come last because earlier canonical rules force overflow:hidden
+   and a seven-column grid.
+   ========================================================= */
+@media (max-width: 720px) {
+  .perspectivePage {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .perspectivePage .perspectiveHero {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .perspectivePage .perspectiveContent,
+  .perspectivePage .perspectivesEmbedded,
+  .perspectivePage .perspectiveFoundation {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .perspectivePage .perspectiveFoundation {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .perspectivePage .perspectiveAllGrid {
+    display: flex !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    gap: 14px !important;
+    padding: 34px 20px 205px !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-left: 20px !important;
+    scrollbar-width: none !important;
+  }
+
+  .perspectivePage .perspectiveAllGrid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .perspectivePage .perspectiveAllCard {
+    flex: 0 0 78vw !important;
+    width: 78vw !important;
+    min-width: 78vw !important;
+    max-width: 320px !important;
+    min-height: 300px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always;
+  }
+
+  .perspectivePage .perspectiveAllCard:last-child {
+    margin-right: 20px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE HEADER — AUTHORITATIVE LAYOUT FIX
+   Exact geometry: [ hamburger ][ logo ] ........ [ CTA ]
+   Header.tsx must use .headerBrandGroup around hamburger + logo.
+   This block intentionally overrides the earlier display:contents hack.
+   ========================================================= */
+@media (max-width: 720px) {
+  .header {
+    display: flex !important;
+    grid-template-columns: none !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .headerBrandGroup {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    position: relative !important;
+    z-index: 62 !important;
+  }
+
+  .headerBrandGroup .mobileMenuButton {
+    position: relative !important;
+    inset: auto !important;
+    order: 1 !important;
+    display: flex !important;
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 38px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .headerBrandGroup .brand,
+  .headerBrandGroup .brandLogo {
+    position: relative !important;
+    inset: auto !important;
+    order: 2 !important;
+    flex: 0 0 112px !important;
+    width: 112px !important;
+    height: 46px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .headerBrandGroup .brandLogo img {
+    display: block !important;
+    width: 126px !important;
+    max-width: none !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  .headerActions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    position: relative !important;
+    z-index: 62 !important;
+  }
+
+  .headerActions .mobileMenuButton {
+    display: none !important;
+  }
+
+  .headerCta {
+    position: relative !important;
+    order: initial !important;
+    margin: 0 !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+/* =========================================================
+   HOME HERO — MOBILE DROP BACKGROUNDS ACTUAL IMAGE SCALE
+   ========================================================= */
+@media (max-width: 720px) {
+  .ventureBackgroundDropImage {
+    transform: scale(1.45) !important;
+    transform-origin: center bottom !important;
+  }
+}
+

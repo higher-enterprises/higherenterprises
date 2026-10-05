@@ -6,7 +6,7 @@ export default function StudiosPage() {
     <Screen
       className="studiosPage"
       eyebrow="STUDIOS"
-      title={"come fly with us"}
+      title={"fly with us"}
       intro={
         <p>
           We build with and alongside founders from first idea to lasting enterprise.
