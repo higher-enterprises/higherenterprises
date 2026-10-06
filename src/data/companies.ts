@@ -15,7 +15,7 @@ export const companies:Company[]=[
     "impacts": [
       "Economic Mobility"
     ],
-    "description":  Whether you're solo or running a full studio, Scheddy brings clarity to your calendar and structure to your workflow. .",
+    "description": Scheddy brings clarity to your calendar and structure to your workflow. .",
     "image": "/assets/companies/registry/scheddy-card.png",
     "logo": "/assets/companies/registry/scheddy-logo.png",
     "tags": [
