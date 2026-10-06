@@ -45,9 +45,11 @@ export default function Header() {
         </div>
 
         <nav aria-label="Primary navigation">
-          <Link href="/">Rising</Link>
           <Link href="/ventures">Ventures</Link>
-          <Link href="/studios">Studios</Link>
+          <Link href="/studios">Companies</Link>
+          <Link href="/industries">Industries</Link>
+          <Link href="/academies">Academies</Link>
+          <Link href="/innertainment">Entertainment</Link>
           <Link href="/perspective">Perspective</Link>
         </nav>
 
